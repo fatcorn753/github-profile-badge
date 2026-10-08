@@ -1,0 +1,14 @@
+<!-- 中央テキスト -->
+  <g transform="translate(300, 90)">
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="0.3; 1.1; 1; 0.8; 0.3" keyTimes="0; 0.22; 0.26; 0.9; 1" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.22; 0.8; 0.9; 1" dur="3s" repeatCount="indefinite" />
+      
+      <!-- ★ここを任意の文字列（例: USER_NAME）に変更するだけ -->
+      <text x="0" y="0" dominant-baseline="central" text-anchor="middle" class="main-text">
+        USER
+      </text>
+
+    </g>
+  </g>
+</svg>
