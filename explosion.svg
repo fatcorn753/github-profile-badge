@@ -1,14 +1,70 @@
-<!-- 中央テキスト -->
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="180" viewBox="0 0 600 180">
+  <style>
+    /* 背景スタイル */
+    .bg { fill: #0d1117; rx: 12px; }
+
+    /* 中央テキストスタイル */
+    .main-text {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 38px;
+      font-weight: 800;
+      fill: #ffffff;
+    }
+
+    /* 衝撃波カラー */
+    .shockwave-color {
+      stroke: #00f0ff;
+    }
+  </style>
+
+  <!-- 背景 -->
+  <rect width="100%" height="100%" class="bg" />
+
+  <!-- 衝撃波エフェクト（SMILで無限ループ） -->
+  <circle cx="300" cy="90" r="0" fill="none" class="shockwave-color" stroke-width="8" opacity="0">
+    <animate attributeName="r" values="0; 0; 140; 140" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 0; 0" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="stroke-width" values="8; 8; 1; 1" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- 爆発粒子グループ（全方向に飛散） -->
+  <g transform="translate(300, 90)">
+    <circle cx="0" cy="0" r="6" fill="#ff2a5f">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; -130,-60; -130,-60" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 1; 0; 0" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="8" fill="#00f0ff">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 120,-70; 120,-70" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 1; 0; 0" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="5" fill="#ffe600">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; -140,40; -140,40" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 1; 0; 0" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="7" fill="#00ff66">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 130,50; 130,50" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 1; 0; 0" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="9" fill="#ff7700">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; -60,-80; -60,-80" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 1; 0; 0" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="6" fill="#b026ff">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 70,80; 70,80" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 1; 0; 0" keyTimes="0; 0.1; 0.35; 1" dur="3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- 中央テキスト -->
   <g transform="translate(300, 90)">
     <g>
       <animateTransform attributeName="transform" type="scale" values="0.3; 1.1; 1; 0.8; 0.3" keyTimes="0; 0.22; 0.26; 0.9; 1" dur="3s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.22; 0.8; 0.9; 1" dur="3s" repeatCount="indefinite" />
       
-      <!-- ★ここを任意の文字列（例: USER_NAME）に変更するだけ -->
+      <!-- 表示したいテキスト（YOUR_NAME を変更） -->
       <text x="0" y="0" dominant-baseline="central" text-anchor="middle" class="main-text">
-        USER
+        YOUR_NAME
       </text>
-
     </g>
   </g>
 </svg>
